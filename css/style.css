@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+.top{
+  margin-top: 25%;
+}
+
+nav{
+	position: fixed;
+	top:0;
+}
+
+
+body{
+	font-family: "Raleway";
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background:#e0f2f1;
+}
+
+main {
+  flex: 1 0 auto;
+  background: #9fa8da no-repeat top center fixed;
+}
+
+
+
+footer{
+  z-index:1;
+  margin: 0 !important;
+}
