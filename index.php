@@ -10,6 +10,7 @@
 			<a class="waves-effect waves-light btn-large indigo darken-3">Inscription</a>
 		</div>
 	</div>
+	<div class="principal">
 	<div class="row">
 		<div class="col s12 l6 center-align">
 			<div class="top">
@@ -17,6 +18,7 @@
 			</div>
 			<div class="top"></div>
 		</div>
+	</div>
 	</div>
 </div>
 

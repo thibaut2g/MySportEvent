@@ -34,4 +34,5 @@
     </div>
   </nav>
  
-  <main>
+  <main class="accueil">
+
