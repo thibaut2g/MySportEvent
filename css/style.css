@@ -32,7 +32,8 @@ footer{
 }
 
 .accueil{
-  background: url("../img/banniere1.jpg") no-repeat top center;
+  background: url("../img/banniere2.jpg") #9fa8da no-repeat top center;
+  background-size: 100%;
 }
 
 .principal{
