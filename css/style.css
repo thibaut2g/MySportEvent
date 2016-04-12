@@ -2,8 +2,17 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
 .top{
+  margin-top: 12%;
+}
+
+.top2{
   margin-top: 25%;
 }
+
+.top3{
+  margin-top: 30%;
+}
+
 
 nav{
 	position: fixed;
@@ -21,7 +30,6 @@ body{
 
 main {
   flex: 1 0 auto;
-  background: #9fa8da no-repeat top center fixed;
 }
 
 
@@ -31,11 +39,15 @@ footer{
   margin: 0 !important;
 }
 
-.accueil{
-  background: url("../img/banniere2.jpg") #9fa8da no-repeat top center;
-  background-size: 100%;
-}
-
 .principal{
   background: #e0f2f1;
+}
+
+#connexion{
+  opacity:0;
+  background: #e0f2f1
+}
+
+form{
+  background: rgba(121, 134, 203, 0.7);
 }

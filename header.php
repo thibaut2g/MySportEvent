@@ -18,21 +18,23 @@
       
       
       <ul class="right hide-on-med-and-down">
-              <li><a href="#">Accueil</a></li>
-              <li><a href="#/about.php">A propos</a></li>
-              <li> <a href="#/photo.php">Photos</a> </li>
-              <li><a href="#">Infos Pratiques</a></li>
+              <li><a href="index.php">Accueil</a></li>
+              <li> <a href="#/photo.php">Proposer</a> </li>
+              <li><a href="#">Rechercher</a></li>
+              <li><a href="#">Profil</a></li>
+              <li><a href="about.php">A propos</a></li>
 
       </ul>
 
       <ul class="side-nav">
+              <li><a href="#/photo.php">Rechercher</a></li>
+              <li> <a href="#/photo.php">Proposer</a> </li>
+              <li><a href="#">Profil</a> </li>
               <li><a href="#/about.php">A propos</a></li>
-              <li><a href="#/photo.php">Photos</a></li>
-              <li><a href="#">Infos Pratiques</a> </li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
  
-  <main class="accueil">
+  <main>
 
