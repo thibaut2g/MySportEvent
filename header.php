@@ -19,7 +19,7 @@
       
       <ul class="right hide-on-med-and-down">
               <li><a href="index.php">Accueil</a></li>
-              <li> <a href="#/photo.php">Proposer</a> </li>
+              <li> <a href="proposer.php">Proposer</a> </li>
               <li><a href="#">Rechercher</a></li>
               <li><a href="#">Profil</a></li>
               <li><a href="about.php">A propos</a></li>

@@ -16,14 +16,22 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="/Experiment/js/materialize.js"></script>
-  <script src="/Experiment/js/init.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/main.js"></script>
    <script type="text/javascript" charset="utf-8">
    
   $(".button-collapse").sideNav();
-        $(document).ready(function(){
+  $(document).ready(function(){
     $('.scrollspy').scrollSpy();
   });
-</script>
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+  </script>
   </body>
 </html>

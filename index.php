@@ -75,12 +75,24 @@
 			<div class="top"></div>
 			<div class="top"></div>
 				<p class="flow-text scrollspy" id="texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod asperiores repudiandae, eum nemo voluptas dolores, at est similique, debitis dicta minus suscipit dolorum modi! Esse iste ipsam excepturi sed aliquid!</p>
-			
-			<div class="top"></div>
-		</div>
+				<div class="card">
+				    <div class="card-image waves-effect waves-block waves-light">
+				      <img class="activator" src="img/banniere3.jpg">
+				    </div>
+				    <div class="card-content">
+				      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+				      <p><a href="#">This is a link</a></p>
+				    </div>
+				    <div class="card-reveal">
+				      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+				      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+				    </div>
+				  </div>
+				<div class="top"></div>
 	</div>
-	</div>
-</div>
+					</div>
+					</div>
+				</div>
 
 
 <script>
