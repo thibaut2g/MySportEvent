@@ -18,7 +18,7 @@
 			    <li>
 			      <div class="collapsible-header flow-text indigo darken-3 white-text waves-effect waves-light">Connexion</div>
 			      <div class="collapsible-body">
-				      <form class="col s12" action="fonction/verifie.php" method="post">
+				      <form class="col s12" action="fonction/connexion.php" method="post">
 					      <div class="row">
 					        <div class="input-field col s12">
 					          <input id="pseudo" type="text" class="validate" name="pseudo">
@@ -43,17 +43,31 @@
 			    <li>
 			      <div class="collapsible-header flow-text indigo darken-3 white-text waves-effect waves-light">Inscription</div>
 			      <div class="collapsible-body">
-				      <form class="col s12">
+				      <form class="col s12" action="fonction/inscription.php" method=post>
 				      <div class="row">
 				        <div class="input-field col s12">
-				          <input id="pseudo" type="text" class="validate">
-				          <label for="pseudo">Pseudo</label>
+				          <input id="nom" name="nom" type="text" class="validate">
+				          <label for="nom">Nom</label>
 				        </div>
-				      </div>
-				      <div class="row">
 				        <div class="input-field col s12">
-				          <input id="password" type="password" class="validate">
-				          <label for="password">Password</label>
+				          <input id="prenom" name="prenom" type="text" class="validate">
+				          <label for="prenom">Prenom</label>
+				        </div>
+				        <div class="input-field col s12">
+				          <input id="datenaissance" name="datenaissance" type="date" class="validate datepicker">
+				          <label for="datenaissance">Date de naissance</label>
+				        </div>
+				        <div class="input-field col s12">
+				          <input id="ecole" name="ecole" type="text" class="validate">
+				          <label for="ecole">Ecole</label>
+				        </div>
+				        <div class="input-field col s12">
+				          <input id="mail" name="mail" type="email" class="validate">
+				          <label for="mail">Mail</label>
+				        </div>
+				        <div class="input-field col s12">
+				          <input id="mdp" name="mdp" type="text" class="validate">
+				          <label for="mdp">Mot de passe</label>
 				        </div>
 				      </div>
 				      <input class="large btn-large indigo darken-3" type="submit" value="Ok !" />
