@@ -1,2 +1,3 @@
 <div class="top"></div>
 Euh...
+<?php var_dump($_SESSION); ?>

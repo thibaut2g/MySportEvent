@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,10 +19,22 @@
       
       
       <ul class="right hide-on-med-and-down">
-              <li><a href="accueil.php">Accueil</a></li>
-              <li> <a href="proposer.php">Proposer</a> </li>
+              <?php if (!isset($_SESSION['id']) OR !isset($_SESSION['pseudo']))
+                      {
+                         echo '<li><a href="accueil.php">Accueil</a></li>';
+                      } ?>
+              <?php if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
+                      {
+                         echo '<li><a href="profil.php">Profil</a></li>';
+                      } ?>
+              <?php if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
+                      {
+                         echo '<li> <a href="proposer.php">Proposer</a> </li>';
+                      } ?>              
               <li><a href="#">Rechercher</a></li>
-              <li><a href="#">Profil</a></li>
+              
+              
+              
               <li><a href="about.php">A propos</a></li>
 
       </ul>

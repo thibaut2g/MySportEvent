@@ -5,7 +5,7 @@ $prenom=htmlspecialchars($_POST['prenom']);
 $datenaissance=htmlspecialchars($_POST['datenaissance']);
 $ecole=htmlspecialchars($_POST['ecole']);
 $mail=htmlspecialchars($_POST['mail']);
-$pass_hache = md5($_POST['mdp']);
+$pass_hache = md5(htmlspecialchars($_POST['mdp']));
 
 $verifie = $bdd->query('SELECT nom FROM etudiants WHERE mail="'.$mail.'"');
 

@@ -1,3 +1,7 @@
+<?php if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
+          {
+           header("Location:erreur.php");
+          } ?>
 <style>
 	main{		
 		  background: url("img/banniere2.jpg") #9fa8da no-repeat top center;
@@ -21,7 +25,7 @@
 				   		<form class="col s12" action="fonction/connexion.php" method="post">
 					      <div class="row">
 					        <div class="input-field col s12">
-					          <input id="pseudo" type="text" class="validate" name="pseudo">
+					          <input id="mail" type="email" class="validate" name="mail">
 					          <label for="pseudo">Pseudo</label>
 					        </div>
 					      </div>

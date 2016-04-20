@@ -1,10 +1,10 @@
 <?php 
 // Hachage du mot de passe
-$pass_hache = md5($_POST['mdp']);
-$mail = $_POST['mail'];
+$pass_hache = md5(htmlspecialchars($_POST['mdp']));
+$mail = htmlspecialchars($_POST['mail']);
 
 // Vérification des identifiants
-require "fonction/pdo.php";
+require "pdo.php";
 
 $req = $bdd->prepare('SELECT etudiant_id FROM etudiants WHERE mail = :mail AND mdp = :mdp');
 $req->execute(array(
@@ -20,13 +20,13 @@ if (!$resultat)
 else
 {
     session_start();
-    $_SESSION['id'] = $resultat['id'];
+    $_SESSION['id'] = $resultat['etudiant_id'];
     $_SESSION['pseudo'] = $mail;
     echo 'Vous êtes connecté !</br>';
 }
 
 if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
 {
-   header("Location:pages/profil.php");
+   header("Location:../profil.php");
 }
         ?>
