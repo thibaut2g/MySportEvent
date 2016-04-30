@@ -49,3 +49,8 @@ footer{
 form{
   background: rgba(121, 134, 203, 0.7);
 }
+
+.flash{
+  background: #ef5350;
+  padding:5%;
+}

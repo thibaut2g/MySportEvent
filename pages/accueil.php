@@ -1,6 +1,6 @@
 <?php if (isset($_SESSION['id']) AND isset($_SESSION['pseudo']))
           {
-           header("Location:erreur.php");
+           header("Location:profil.php");
           } ?>
 <style>
 	main{		
@@ -16,7 +16,15 @@
 
 <div class="container">
 	<div class="row">
+			<div class="col s12 m6">
+		<?php 
+         if (isset($_GET['connexion'])) {
+         	echo '<p class="flash z-depth-2 flow-text">Mauvais identifiant ou mot de passe</p>';
+          }  ?>
+          </div>
+	</div>
 
+	<div class="row">
 		<div class="col s12 l6 center-align">
 			  <ul class="collapsible" data-collapsible="expandable">
 			    <li>
@@ -104,6 +112,7 @@
 				      <p>Here is some more information about this product that is only revealed once clicked on.</p>
 				    </div>
 				  </div>
+				  <?php require 'fonction/afficher_evenement.php'; ?>
 				<div class="top"></div>
 	</div>
 					</div>

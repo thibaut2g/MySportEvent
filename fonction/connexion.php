@@ -15,7 +15,7 @@ $resultat = $req->fetch();
 
 if (!$resultat)
 {
-    echo 'Mauvais identifiant ou mot de passe !';
+    header("Location:../accueil.php?connexion=erreur");
 }
 else
 {

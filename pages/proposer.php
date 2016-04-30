@@ -5,17 +5,17 @@
 	<div class="container" >
 		<div class="row " style="margin-bottom:0%">
 
-			<form class="col s12">
+			<form class="col s12" action="fonction/creer_evenement.php" method=post enctype="multipart/form-data">
 					<div class="top"></div>
 			      <div class="row">
 			      <h1 class="white-text center z-depth-2 indigo darken-3">Nouvel événement </h1>
 			        <div class="input-field col s6">
-			          <input id="titre" type="text" class="validate">
+			          <input id="titre" type="text" name="titre" class="validate">
 			          <label for="titre">Titre</label>
 			        </div>
 			        <br><br/> <br><br/>
 			        <div class="input-field col s12">
-			          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+			          <textarea id="icon_prefix2" name="texte" class="materialize-textarea"></textarea>
 			          <label for="icon_prefix2">Description</label>
 			          <br><br/>
 			        </div>
@@ -53,7 +53,7 @@
 					    <div class="file-field input-field">
 					      <div class="btn">
 					        <span>Je choisis ma photo</span>
-					        <input type="file">
+					        <input type="file" name="img">
 					      </div>
 					      <div class="file-path-wrapper">
 					        <input class="file-path validate" type="text">
