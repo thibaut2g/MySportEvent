@@ -1,4 +1,6 @@
 <?php 
+  session_start();
+  $etudiant=$_SESSION['id'];
 	require 'pdo.php';
 	$titre=htmlspecialchars($_POST['titre']);
 	$texte=htmlspecialchars($_POST['texte']);
@@ -22,9 +24,10 @@
    
 
 		
-	$req = $bdd->prepare('INSERT INTO evenements(nom_evenement,date_evenement,heure_evenement, type_sport,informations,nbjoursmax,image) VALUES(:titre, :date, :heure, :sport, :texte, :nbmax, :im_name)');
+  $req = $bdd->prepare('INSERT INTO evenements(nom_evenement,date_evenement,heure_evenement, type_sport,informations,nbjoursmax,image,evenement_admin) VALUES(:titre, :date, :heure, :sport, :texte, :nbmax, :im_name,'.$etudiant.')');
 
-	$req->execute(array('titre' => $titre, 'date' => $date, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'im_name' => $im_name));  
+  $req->execute(array('titre' => $titre, 'date' => $date, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'im_name' => $im_name));  	
+
 
 
 	header("Location:../profil.php") ;

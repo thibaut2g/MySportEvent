@@ -12,7 +12,7 @@
 		              <p>'.$reponse['informations'].'</p>
 		            </div>
 		            <div class="card-action">
-		              <a href="#">Voir</a><p class="right">'.$reponse['date_evenement'].'</p>
+		              <a href="evenement.php?id='.$reponse['evenement_id'].'">Voir</a><p class="right">'.$reponse['date_evenement'].'</p>
 		            </div>
 		          </div>
 		        </div>';

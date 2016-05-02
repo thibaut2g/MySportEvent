@@ -12,8 +12,10 @@
 	        $upload1 = upload('img','../img/'.$image,FALSE,FALSE);
 	        if ($upload1 !== FALSE AND $image !== ''){
 	          $im_name = "img/".$image;
-	          $bdd->query('UPDATE evenements SET image = "'.$im_name.'", WHERE evenement_id='.$id);
-	        }}
+	          $bdd->query('UPDATE evenements SET image = "'.$im_name.'" WHERE evenement_id='.$id);
+	        }else{
+	    		$bdd->query('UPDATE evenements SET image = "euh" WHERE evenement_id='.$id);} 
+	        }
 	  if ($date !== ''){
 	          $bdd->query('UPDATE evenements SET date_evenement = "'.$date.'" WHERE evenement_id='.$id);
 	        }
@@ -22,10 +24,10 @@
 					    informations = :texte,
 					    heure_evenement = :heure,
 					    type_sport = :sport,
-					    nbjoursmax = :nbmax,
-					    image = :im_name WHERE evenement_id='.$id);
+					    nbjoursmax = :nbmax
+					    WHERE evenement_id='.$id);
 
-	$req->execute(array('titre' => $titre, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'im_name' => $im_name));  
+	$req->execute(array('titre' => $titre, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax));  
 
 
       header("Location:../profil.php");

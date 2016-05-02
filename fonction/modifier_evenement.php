@@ -2,7 +2,7 @@
 
 	<?php
 		require 'pdo.php';
-		$req = $bdd->query('SELECT evenement_id,nom_evenement,informations, date_evenement FROM evenements');
+		$req = $bdd->query('SELECT evenement_id,nom_evenement,informations, date_evenement FROM evenements WHERE evenement_admin='.$_SESSION['id']);
 		while ($reponse=$req->fetch()){
 			echo '
 				<li>
