@@ -31,7 +31,7 @@
                       {
                          echo '<li> <a href="proposer.php">Proposer</a> </li>';
                       } ?>              
-              <li><a href="#">Rechercher</a></li>
+              <li><a href="rechercher.php">Rechercher</a></li>
               
               
               
@@ -40,7 +40,7 @@
       </ul>
 
       <ul class="side-nav">
-              <li><a href="#/photo.php">Rechercher</a></li>
+              <li><a href="rechercher.php">Rechercher</a></li>
               <li> <a href="#/photo.php">Proposer</a> </li>
               <li><a href="#">Profil</a> </li>
               <li><a href="#/about.php">A propos</a></li>
