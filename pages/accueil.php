@@ -19,7 +19,12 @@
 			<div class="col s12 m6">
 		<?php 
          if (isset($_GET['connexion'])) {
-         	echo '<p class="flash z-depth-2 flow-text">Mauvais identifiant ou mot de passe</p>';
+         	if ($_GET['connexion']=='erreur_connexion') {
+         		echo '<p class="flash z-depth-2 flow-text">Mauvais identifiant ou mot de passe</p>';
+         	}
+         	elseif ($_GET['connexion']=='erreur_inscription') {
+         		echo '<p class="flash z-depth-2 flow-text">Adresse mail déjà existante</p>';
+         	}
           }  ?>
           </div>
 	</div>

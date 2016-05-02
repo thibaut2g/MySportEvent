@@ -26,7 +26,7 @@ if ($verifie==false) {
     header('Location: ../profil.php');
     
 }else{
-    header('Location: ../erreur.php');
+    header("Location:../accueil.php?connexion=erreur_inscription");
 }
 
 ?>

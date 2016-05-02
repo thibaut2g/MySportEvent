@@ -16,7 +16,7 @@ $resultat = $req->fetch();
 
 if (!$resultat)
 {
-    header("Location:../accueil.php?connexion=erreur");
+    header("Location:../accueil.php?connexion=erreur_connexion");
 }
 else
 {
