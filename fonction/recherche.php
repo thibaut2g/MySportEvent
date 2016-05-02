@@ -1,7 +1,7 @@
 <?php
 	require "pdo.php";
 	$recherche=htmlspecialchars($_POST['recherche']);
-	$req = $bdd->query('SELECT * FROM evenements WHERE nom_evenement LIKE "%'.$recherche.'%"');
+	$req = $bdd->query('SELECT * FROM evenements WHERE nom_evenement LIKE "%'.$recherche.'%" OR informations LIKE "%'.$recherche.'%"');
 	while ($reponse=$req->fetch()){
 			echo '<div class="col s12">
 		          <div class="card">
@@ -13,7 +13,7 @@
 		              <p>'.$reponse['informations'].'</p>
 		            </div>
 		            <div class="card-action">
-		              <a href="#">Voir</a><p class="right">'.$reponse['date_evenement'].'</p>
+		              <a  href="evenement.php?id='.$reponse['evenement_id'].'">Voir</a><p class="right">'.$reponse['date_evenement'].'</p>
 		            </div>
 		          </div>
 		        </div>';

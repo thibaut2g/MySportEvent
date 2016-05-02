@@ -6,7 +6,9 @@
     <form class="col s12" method=post>
       <div class="row">
         <div class="input-field col s5">
-          <input type="text" name="recherche" id="textarea1" class="materialize-textarea">
+          <input type="text" name="recherche" id="textarea1" class="materialize-textarea" value=<?php if (isset($_POST['action'])) {
+  		echo $_POST['recherche'];
+  	} ?>>
           <label for="textarea1"></label>
         </div>
      
