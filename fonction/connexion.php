@@ -3,6 +3,7 @@
 $pass_hache = md5(htmlspecialchars($_POST['mdp']));
 $mail = htmlspecialchars($_POST['mail']);
 
+
 // Vérification des identifiants
 require "pdo.php";
 

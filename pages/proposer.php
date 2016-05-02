@@ -21,30 +21,30 @@
 			        </div>
 			        <div class="col s3">
 				  			<label for="date">Date</label>
-				  			<input id="date" type="date" class="datepicker">
+				  			<input id="date" type="date" name="date" class="datepicker">
 				  			<br><br/> 
 				  			<label for="time">Heure</label>
-				  			<input id="time"  type="time">
+				  			<input id="time" name="heure" type="time">
 				  	</div>
 				  	
 				  		<div class="col s12">
 				  		<br><br/> 
-				  		<label for="icon_prefix2">Discipline sportive</label>
+				  		<label for="icon_prefix2" >Discipline sportive</label>
 						<p>
-					      <input name="group1" type="radio" id="test1" />
+					      <input type="radio" name="sport" value="running" id="test1" />
 					      <label for="test1">Running</label>
 					    </p>
 					    <p>
-					      <input name="group1" type="radio" id="test2" />
+					      <input type="radio" name="sport" value="football" id="test2" />
 					      <label for="test2">Football</label>
 					    </p>
 					     <br><br/>
 			        </div>
 			       
 			        <div class="col s12">
-			        <label for="icon_prefix2">Nombre maximal de joueurs</label>
+			        <label for="icon_prefix2"  >Nombre maximal de joueurs</label>
 			        	<p class="range-field">
-      						<input type="range" id="test5" min="0" max="50" />
+      						<input type="range" id="test5" name="nbmax" min="0" max="50" />
     					</p>
     					<br><br/>
 			        </div>

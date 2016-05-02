@@ -27,9 +27,38 @@
 			    <br><br/> <br><br/>
 			    <div class="input-field col s12">
 			      <textarea id="icon_prefix2" name="texte" class="materialize-textarea"><?php echo $resultat['informations']; ?></textarea>
-			      <label for="icon_prefix2">Contenu</label>
+			      <label for="icon_prefix2">Description</label>
 			      <br><br/>
-            <input class="large btn-large" type="submit" value="Modifier" />
+			     </div>
+			    <div class="col s3" >
+				  	<label for="date">Date</label>
+				  	<input id="date" type="date" name="date" class="datepicker" value=<?php echo $resultat['date_evenement']; ?>>
+				  	<br><br/> 
+				  	<label for="time">Heure</label>
+				  	<input id="time" name="heure" type="time" value=<?php echo $resultat['heure_evenement']; ?>>
+				</div>
+				<div class="col s12">
+				  		<br><br/> 
+				  		<label for="icon_prefix2" name="sport">Discipline sportive</label>
+						<p>
+					      <input name="group1" type="radio" id="test1" />
+					      <label for="test1">Running</label>
+					    </p>
+					    <p>
+					      <input name="group1" type="radio" id="test2" />
+					      <label for="test2">Football</label>
+					    </p>
+					     <br><br/>
+			        </div>
+			        <div class="col s12">
+			        	<label for="icon_prefix2" name="nbmax" >Nombre maximal de joueurs</label>
+			        	<p class="range-field">
+      						<input type="range" id="test5" min="0" max="50" value= <?php echo $resultat['nbjoursmax']; ?> />
+    					</p>
+    					<br><br/>
+			        </div>
+				<div>
+            		<input class="large btn-large" type="submit" value="Modifier" />
 			  		<a href="profil.php" class="waves-effect waves-light btn btn-large right">Annuler</a>
 			    </div>
 			</div>
