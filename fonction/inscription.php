@@ -22,7 +22,9 @@ if ($verifie==false) {
 	$resultat = $req->fetch();
     session_start();
     $_SESSION['id'] = $resultat['etudiant_id'];
+    $_SESSION['mail'] = $mail;
     $_SESSION['pseudo'] = $mail;
+    $_SESSION['prenom'] = $prenom;
     header('Location: ../profil.php');
     
 }else{

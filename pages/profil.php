@@ -24,6 +24,7 @@
 	<br><br>
 <h3>Tu participes à </h3><hr>
 	<?php require 'fonction/participe.php' ?>
+	<div class="top4"></div>
 	<div class="row center">
 		<div class="col s6">
 			<a href="rechercher.php" class="large btn-large indigo darken-3">Rechercher</a>

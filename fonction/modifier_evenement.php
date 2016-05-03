@@ -1,8 +1,10 @@
-	<ul class="collapsible" data-collapsible="accordion">
+	<ul class="collapsible white" data-collapsible="accordion">
 
 	<?php
 		require 'pdo.php';
 		$req = $bdd->query('SELECT evenement_id,nom_evenement,informations, date_evenement FROM evenements WHERE evenement_admin='.$_SESSION['id']);
+
+		$a=0;
 		while ($reponse=$req->fetch()){
 			echo '
 				<li>
@@ -25,7 +27,13 @@
 					</div>
 					</div>
 			    </li>';
+			    $a++;
 		}
+	if ($a==0) {
+		echo'<p class="flow-text">Tu n\'organises aucun événement pour le moment</p>';
+	}
+
+	
 	?>
 	</ul>
 <script>

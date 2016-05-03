@@ -26,7 +26,9 @@
 		
   $req = $bdd->prepare('INSERT INTO evenements(nom_evenement,date_evenement,heure_evenement, type_sport,informations,nbjoursmax,image,evenement_admin) VALUES(:titre, :date, :heure, :sport, :texte, :nbmax, :im_name,'.$etudiant.')');
 
-  $req->execute(array('titre' => $titre, 'date' => $date, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'im_name' => $im_name));  	
+  $req->execute(array('titre' => $titre, 'date' => $date, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'im_name' => $im_name)); 
+
+  $bdd->query('INSERT INTO participe VALUES('.$etudiant_id.','.$evenement_id.')'); 	
 
 
 

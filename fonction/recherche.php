@@ -2,6 +2,7 @@
 	require "pdo.php";
 	$recherche=htmlspecialchars($_POST['recherche']);
 	$req = $bdd->query('SELECT * FROM evenements WHERE nom_evenement LIKE "%'.$recherche.'%" OR informations LIKE "%'.$recherche.'%"');
+	$a=0;
 	while ($reponse=$req->fetch()){
 			echo '<div class="col s12">
 		          <div class="card">
@@ -17,5 +18,10 @@
 		            </div>
 		          </div>
 		        </div>';
+		        $a++;
 		}
+	if ($a==0) {
+		echo '<p class="flow-text center">Nous n\'avons rien trouvé</p>' ;
+	}
 ?>
+
