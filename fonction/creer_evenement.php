@@ -9,30 +9,40 @@
 	$sport=htmlspecialchars( $_POST['sport']);
 	$nbmax= htmlspecialchars($_POST['nbmax']);
 	$image=htmlspecialchars($_FILES['img']['name']);
-
 	
-	if ($image !== ''){
+	
+   
+  if ($titre!=='' and $texte!=='' and $date!=='' and $date!=='' and $heure!=='' and $sport!=='' and $nbmax!==''){
+    if ($image !== ''){
         $upload1 = upload('img','../img/'.$image,FALSE,FALSE);
         if ($upload1 !== FALSE AND $image !== ''){
           $im_name = "img/".$image;
         }else{
-          $im_name = "img/mystere.jpg";
+          $im_name = "img/inconnu.png";
         }
-  	}else{
-    $im_name = "img/mystere.jpg";
-  	}
-   
+    }else{
+    $im_name = "img/inconnu.png";
+    }
+        $req = $bdd->prepare('INSERT INTO evenements(nom_evenement,date_evenement,heure_evenement, type_sport,informations,nbjoursmax,image,evenement_admin) VALUES(:titre, :date, :heure, :sport, :texte, :nbmax, :im_name,'.$etudiant.')');
 
-		
-  $req = $bdd->prepare('INSERT INTO evenements(nom_evenement,date_evenement,heure_evenement, type_sport,informations,nbjoursmax,image,evenement_admin) VALUES(:titre, :date, :heure, :sport, :texte, :nbmax, :im_name,'.$etudiant.')');
+    $req->execute(array('titre' => $titre, 'date' => $date, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'im_name' => $im_name)); 
 
-  $req->execute(array('titre' => $titre, 'date' => $date, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'im_name' => $im_name)); 
+    $evenement_id=$bdd->query('SELECT evenement_id FROM evenements WHERE nom_evenement="'.$titre.'" and evenement_admin='.$etudiant);
+    $evenement_id=$evenement_id->fetch();
+    $bdd->query('INSERT INTO participe(etudiant_id,evenement_id) VALUES("'.$etudiant.'","'.$evenement_id['evenement_id'].'")');
 
-  $bdd->query('INSERT INTO participe VALUES('.$etudiant_id.','.$evenement_id.')'); 	
+     header("Location:../profil.php") ;
+  }
+
+  else{
+
+    header("Location:../proposer.php?erreur=1");
+    }
 
 
 
-	header("Location:../profil.php") ;
+	
+  
 
 
 function upload($index,$destination,$maxsize=FALSE,$extensions=FALSE){

@@ -7,6 +7,12 @@
 
 			<form class="col s12" action="fonction/creer_evenement.php" method=post enctype="multipart/form-data">
 					<div class="top"></div>
+					<?php 
+			         if (isset($_GET['erreur'])) {
+			         	if ($_GET['erreur']==1) {
+			         		echo '<p class="flash z-depth-2 flow-text">Tu as mal rempli ton formulaire</p>';
+			         	}
+			          }  ?>
 			      <div class="row">
 			      <h1 class="white-text center z-depth-2 indigo darken-3">Nouvel événement </h1>
 			        <div class="input-field col s6">

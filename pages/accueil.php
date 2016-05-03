@@ -25,6 +25,9 @@
          	elseif ($_GET['connexion']=='erreur_inscription') {
          		echo '<p class="flash z-depth-2 flow-text">Adresse mail déjà existante</p>';
          	}
+         	elseif ($_GET['connexion']=='erreur_incomplet') {
+         		echo '<p class="flash z-depth-2 flow-text">Les données saisies sont incomplètes !</p>';
+         	}
           }  ?>
           </div>
 	</div>
@@ -103,7 +106,7 @@
 			<div class="top"></div>
 			<div class="top"></div>
 			<div class="top"></div>
-				<p class="flow-text scrollspy" id="texte">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod asperiores repudiandae, eum nemo voluptas dolores, at est similique, debitis dicta minus suscipit dolorum modi! Esse iste ipsam excepturi sed aliquid!</p>
+				<p class="flow-text scrollspy" id="texte">LThibaut petite caisse</p>
 				  <?php require 'fonction/afficher_evenement.php'; ?>
 				<div class="top"></div>
 	</div>
