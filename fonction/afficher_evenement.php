@@ -1,6 +1,8 @@
 <?php
 		require 'pdo.php';
-		$req = $bdd->query('SELECT evenement_id,nom_evenement,informations, date_evenement, image FROM evenements');
+		$dateactuelle = date("d-m-Y");
+		$datelimite = date("Y-m-d", strtotime("+15 day", strtotime($dateactuelle)));
+		$req = $bdd->query('SELECT evenement_id,nom_evenement,informations, date_evenement, image FROM evenements WHERE date_evenement BETWEEN "'.$dateactuelle.'" AND "'.$datelimite.'" ORDER BY date_evenement');
 		while ($reponse=$req->fetch()){
 			echo '<div class="col s12">
 		          <div class="card">

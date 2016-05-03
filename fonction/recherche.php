@@ -1,7 +1,9 @@
 <?php
 	require "pdo.php";
+	$dateactuelle = date("d-m-Y");
+	$datelimite = date("Y-m-d", strtotime("+360 day", strtotime($dateactuelle)));
 	$recherche=htmlspecialchars($_POST['recherche']);
-	$req = $bdd->query('SELECT * FROM evenements WHERE nom_evenement LIKE "%'.$recherche.'%" OR informations LIKE "%'.$recherche.'%"');
+	$req = $bdd->query('SELECT * FROM evenements WHERE nom_evenement LIKE "%'.$recherche.'%" OR informations LIKE "%'.$recherche.'%" WHERE date_evenement BETWEEN "'.$dateactuelle.'" AND "'.$datelimite.'" ORDER BY date_evenement');
 	$a=0;
 	while ($reponse=$req->fetch()){
 			echo '<div class="col s12">

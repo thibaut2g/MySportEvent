@@ -106,7 +106,7 @@
 			<div class="top"></div>
 			<div class="top"></div>
 			<div class="top"></div>
-				<p class="flow-text scrollspy" id="texte">LThibaut petite caisse</p>
+				<p class="flow-text scrollspy" id="texte">Thibaut petite caisse</p>
 				  <?php require 'fonction/afficher_evenement.php'; ?>
 				<div class="top"></div>
 	</div>
