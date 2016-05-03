@@ -66,20 +66,21 @@
 										<h3><?php echo $reponse['nom_evenement']; ?></h3><hr>
 										<p class="flow-text"><?php echo $reponse['informations']; ?></p>
 										<div class="col s6">
-											<p class="flow-text">DATE : <?php echo $reponse['date_evenement']; ?></p>
-											<p class="flow-text">HEURE : <?php echo $reponse['heure_evenement']; ?></p>
+											<p class="flow-text">Date : <?php echo $reponse['date_evenement']; ?></p>
+											<p class="flow-text">Heure : <?php echo $reponse['heure_evenement']; ?></p>
 											<p class="flow-text">Sport : <?php echo $reponse['type_sport']; ?></p>
 											<p class="flow-text">Nombre de participants : <?php echo $nbjoueur['COUNT(*)']; ?></p>
 											<p class="flow-text">Nombre de places restantes : <?php echo $nbplace; ?></p>
 										</div>
 										<div class="col s6">
-											<img src="<?php echo $reponse['image']; ?>" alt="image">
+											<img src="<?php echo $reponse['image']; ?>" alt="pas d'image" class="img1">
 										</div>
 										<div class="col s12">
 											<form class="transparent" action="fonction/participeplus.php" method=post>
 												<input type="hidden" name="participe" value=<?php echo $reponse['evenement_id']; ?>>
 												<input type="submit" class="btn"  value="ne plus participer">
 											</form>
+											<?php require 'fonction/commenter.php'; ?>
 										</div>
 									</div>
 								</div>
@@ -92,14 +93,14 @@
 										<h3><?php echo $reponse['nom_evenement']; ?></h3><hr>
 										<p class="flow-text"><?php echo $reponse['informations']; ?></p>
 										<div class="col s6">
-											<p class="flow-text">DATE : <?php echo $reponse['date_evenement']; ?></p>
-											<p class="flow-text">HEURE : <?php echo $reponse['heure_evenement']; ?></p>
+											<p class="flow-text">Date : <?php echo $reponse['date_evenement']; ?></p>
+											<p class="flow-text">Heure : <?php echo $reponse['heure_evenement']; ?></p>
 											<p class="flow-text">Sport : <?php echo $reponse['type_sport']; ?></p>
 											<p class="flow-text">Nombre de participants : <?php echo $nbjoueur['COUNT(*)']; ?></p>
 											<p class="flow-text">Nombre de places restantes : <?php echo $nbplace; ?></p>
 										</div>
 										<div class="col s6">
-											<img src="<?php echo $reponse['image']; ?>" alt="image">
+											<img src="<?php echo $reponse['image']; ?>" alt="image" class="img1">
 										</div>
 										<div class="col s12">
 											<form class="transparent" action="fonction/participer.php" method=post>

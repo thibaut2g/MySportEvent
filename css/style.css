@@ -57,3 +57,20 @@ form{
   background: #ef5350;
   padding:5%;
 }
+
+.img1{
+  max-width:100%;
+}
+
+.comment{
+  padding:3%;
+  background: #9fa8da;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+.comment2{
+  padding:3%;
+  background: #f8bbd0;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
