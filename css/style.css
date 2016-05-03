@@ -65,12 +65,16 @@ form{
 .comment{
   padding:3%;
   background: #9fa8da;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 2%;
 }
 .comment2{
-  padding:3%;
+  padding:1%;
   background: #f8bbd0;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-bottom: 2%;
+}
+
+.card{
+  max-height: 5%;
 }

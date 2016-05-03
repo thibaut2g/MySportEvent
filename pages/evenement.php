@@ -73,14 +73,22 @@
 											<p class="flow-text">Nombre de places restantes : <?php echo $nbplace; ?></p>
 										</div>
 										<div class="col s6">
-											<img src="<?php echo $reponse['image']; ?>" alt="pas d'image" class="img1">
+											<img src="<?php echo $reponse['image']; ?>" alt="pas d'image" class="img1 z-depth-2">
 										</div>
 										<div class="col s12">
 											<form class="transparent" action="fonction/participeplus.php" method=post>
 												<input type="hidden" name="participe" value=<?php echo $reponse['evenement_id']; ?>>
 												<input type="submit" class="btn"  value="ne plus participer">
 											</form>
-											<?php require 'fonction/commenter.php'; ?>
+											<div class="row">
+												<div class="top"></div>
+										 		<div class="col s12 m6">
+													<?php require 'fonction/commenter.php'; ?>
+												</div>
+												<div class="col s12 m6">
+													<?php require 'fonction/participant.php' ?>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -100,7 +108,7 @@
 											<p class="flow-text">Nombre de places restantes : <?php echo $nbplace; ?></p>
 										</div>
 										<div class="col s6">
-											<img src="<?php echo $reponse['image']; ?>" alt="image" class="img1">
+											<img src="<?php echo $reponse['image']; ?>" alt="image" class="img1 z-depth-2">
 										</div>
 										<div class="col s12">
 											<form class="transparent" action="fonction/participer.php" method=post>

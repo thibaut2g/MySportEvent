@@ -2,16 +2,14 @@
 	$evenement_id=$_GET['id'];
 	$etudiant_id=$_SESSION['id'];
 	if (isset($_POST['commenter'])) {
-		$bdd->query('INSERT INTO commentaires VALUES (NULL, "'.$_POST['message'].'", NOW(), "'.$etudiant_id.'", "'.$evenement_id.'" ) ');
+		$message=htmlspecialchars($_POST['message']);
+		$bdd->query('INSERT INTO commentaires VALUES (NULL, "'.$message.'", NOW(), "'.$etudiant_id.'", "'.$evenement_id.'" ) ');
 	}
 	$req=$bdd->query('SELECT * FROM commentaires WHERE evenement_id='.$evenement_id);
 	
  ?>
 
  <form class="transparent" method=post>
- 	<div class="row">
- 		<div class="col s12 m7">
- 		<div class="top"></div>
 	     <h3>Commentaires</h3><hr>
 
 	 <?php  while($rep=$req->fetch()){
@@ -25,7 +23,7 @@
 				$comment='comment';
 			}
 			
-			echo '<div class="'.$comment.'"><p class="flowtext"><b>'.$prenom.'   :</b>           '.$rep['message'].'</p>
+			echo '<div class="'.$comment.'"><p class="flow-text"><b>'.$prenom.'   :</b>           '.$rep['message'].'</p>
 						<p>'.$rep['dateredaction'].'</p></div>
 					' ;		}?>
 
@@ -35,9 +33,6 @@
 	        </div>
 	        <input type="hidden" name="commenter" value='true'>
 	        <input class="large btn-large indigo darken-3" type="submit" value="Envoyer"  />
-	</div>
-	</div>
-
 	
 
 	
