@@ -6,6 +6,7 @@
 	$heure=htmlspecialchars( $_POST['heure']);
 	$sport=htmlspecialchars( $_POST['sport']);
 	$nbmax= htmlspecialchars($_POST['nbmax']);
+	$lieu= htmlspecialchars($_POST['lieu']);
 	$image=htmlspecialchars($_FILES['img']['name']);
     $id=$_POST['evenement'];
     if ($image !== ''){
@@ -24,10 +25,11 @@
 					    informations = :texte,
 					    heure_evenement = :heure,
 					    type_sport = :sport,
-					    nbjoursmax = :nbmax
+					    nbjoursmax = :nbmax,
+					    lieu = :lieu
 					    WHERE evenement_id='.$id);
 
-	$req->execute(array('titre' => $titre, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax));  
+	$req->execute(array('titre' => $titre, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'lieu' => $lieu));  
 
 
       header("Location:../profil.php");

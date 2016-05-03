@@ -32,7 +32,10 @@
 				  			<label for="time">Heure</label>
 				  			<input id="time" name="heure" type="time">
 				  	</div>
-				  	
+				  	<div class="input-field col s6">
+				      <input id="lieu" type="text" name="lieu">
+				      <label for="lieu">Lieu</label>
+				    </div>
 				  		<div class="col s12">
 				  		<br><br/> 
 				  		<label for="icon_prefix2" >Discipline sportive</label>

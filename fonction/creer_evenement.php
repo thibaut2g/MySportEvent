@@ -7,7 +7,8 @@
 	$date= htmlspecialchars($_POST['date']);
 	$heure=htmlspecialchars( $_POST['heure']);
 	$sport=htmlspecialchars( $_POST['sport']);
-	$nbmax= htmlspecialchars($_POST['nbmax']);
+  $nbmax= htmlspecialchars($_POST['nbmax']);
+	$lieu= htmlspecialchars($_POST['lieu']);
 	$image=htmlspecialchars($_FILES['img']['name']);
 	
    
@@ -22,9 +23,9 @@
     }else{
     $im_name = "img/inconnu.png";
     }
-        $req = $bdd->prepare('INSERT INTO evenements(nom_evenement,date_evenement,heure_evenement, type_sport,informations,nbjoursmax,image,evenement_admin) VALUES(:titre, :date_evenement, :heure, :sport, :texte, :nbmax, :im_name,'.$etudiant.')');
+        $req = $bdd->prepare('INSERT INTO evenements(nom_evenement,date_evenement,heure_evenement, type_sport,informations,nbjoursmax,lieu ,image,evenement_admin) VALUES(:titre, :date_evenement, :heure, :sport, :texte, :nbmax, :lieu, :im_name,'.$etudiant.')');
 
-    $req->execute(array('titre' => $titre, 'date_evenement' => $date, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'im_name' => $im_name)); 
+    $req->execute(array('titre' => $titre, 'date_evenement' => $date, 'heure' => $heure, 'sport' => $sport, 'texte' => $texte, 'nbmax' => $nbmax, 'lieu' => $lieu, 'im_name' => $im_name)); 
 
     $evenement_id=$bdd->query('SELECT evenement_id FROM evenements WHERE nom_evenement="'.$titre.'" and evenement_admin='.$etudiant);
     $evenement_id=$evenement_id->fetch();

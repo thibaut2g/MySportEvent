@@ -74,7 +74,7 @@
                           <label for="prenom">Prenom</label>
                         </div>
                         <div class="input-field col s12">
-                          <input id="datenaissance" name="datenaissance" type="date" class="validate datepicker">
+                          <input id="datenaissance" name="datenaissance" type="date" class="datepicker">
                           <label for="datenaissance">Date de naissance</label>
                         </div>
                         <div class="input-field col s12">
@@ -106,7 +106,7 @@
 			<div class="top"></div>
 			<div class="top"></div>
 			<div class="top"></div>
-				<p class="flow-text scrollspy" id="texte">Thibaut petite caisse</p>
+				<p class="flow-text scrollspy" id="texte">Voici les événements des quinze prochains jours</p>
 				  <?php require 'fonction/afficher_evenement.php'; ?>
 				<div class="top"></div>
 	</div>

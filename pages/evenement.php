@@ -5,11 +5,29 @@
 		<div class="container">
 			<div class="row">
 				
-	          <div class="col s12 l6 offset-l3 center-align">
-	          		<p class="flow-text">Il faut d'abord t'inscrire avant de participer</p>
-	          				<h3>Inscription</h3><hr>
-	                      <form class="col s12" action="fonction/inscription.php" method=post>
+	          <div class="col s12">
+	          		<p class="flow-text">Il faut d'abord t'inscrire ou te connecter avant de participer</p>
+	          				
+	          			<form class="col s5" action="fonction/connexion.php" method="post">
+					      <h3>Connexion</h3><hr>
 					      <div class="row">
+					        <div class="input-field col s12">
+					          <input id="mail" type="email" class="validate" name="mail">
+					          <label for="pseudo">Mail</label>
+					        </div>
+					      </div>
+					      <div class="row">
+					        <div class="input-field col s12">
+					          <input id="password" type="password" class="validate" name="mdp">
+					          <label for="password">Password</label>
+					        </div>
+					      </div>
+					      <input class="large btn-large indigo darken-3" type="submit" value="Ok !" />
+				    	</form>
+	          				
+	                      <form class="col s6 offset-s1" action="fonction/inscription.php" method=post>
+					      	<h3>Inscription</h3><hr>
+					      	<div class="row">
 					        <div class="input-field col s12">
 					          <input id="nom" name="nom" type="text" class="validate">
 	                          <label for="nom">Nom</label>
@@ -19,7 +37,7 @@
 	                          <label for="prenom">Prenom</label>
 	                        </div>
 	                        <div class="input-field col s12">
-	                          <input id="datenaissance" name="datenaissance" type="date" class="validate datepicker">
+	                          <input id="datenaissance" name="datenaissance" type="date" class="datepicker">
 	                          <label for="datenaissance">Date de naissance</label>
 	                        </div>
 	                        <div class="input-field col s12">
@@ -68,6 +86,7 @@
 										<div class="col s6">
 											<p class="flow-text">Date : <?php echo $reponse['date_evenement']; ?></p>
 											<p class="flow-text">Heure : <?php echo $reponse['heure_evenement']; ?></p>
+											<p class="flow-text">Lieu : <?php echo $reponse['lieu']; ?></p>
 											<p class="flow-text">Sport : <?php echo $reponse['type_sport']; ?></p>
 											<p class="flow-text">Nombre de participants : <?php echo $nbjoueur['COUNT(*)']; ?></p>
 											<p class="flow-text">Nombre de places restantes : <?php echo $nbplace; ?></p>

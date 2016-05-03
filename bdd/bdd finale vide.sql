@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 19 Avril 2016 à 21:44
+-- Généré le :  Mar 03 Mai 2016 à 22:47
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `commentaires` (
   `commentaire_id` int(11) NOT NULL AUTO_INCREMENT,
-  `message` varchar(255) NOT NULL,
-  `dateredaction` datetime NOT NULL,
+  `message` text NOT NULL,
+  `dateredaction` timestamp NOT NULL,
   `etudiant_id` int(11) NOT NULL,
   `evenement_id` int(11) NOT NULL,
   PRIMARY KEY (`commentaire_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 -- --------------------------------------------------------
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `etudiants` (
   `mail` varchar(50) NOT NULL,
   `mdp` varchar(255) NOT NULL,
   PRIMARY KEY (`etudiant_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
@@ -65,11 +65,12 @@ CREATE TABLE IF NOT EXISTS `evenements` (
   `heure_evenement` time NOT NULL,
   `type_sport` varchar(30) NOT NULL,
   `informations` varchar(255) NOT NULL,
-  `placesrestantes` int(11) NOT NULL,
   `nbjoursmax` int(11) NOT NULL,
   `lieu` varchar(100) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `evenement_admin` int(11) NOT NULL,
   PRIMARY KEY (`evenement_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 -- --------------------------------------------------------
 
