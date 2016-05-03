@@ -22,6 +22,10 @@
 			      <label for="icon_prefix2">Description</label>
 			      <br><br/>
 			     </div>
+				<div class="input-field col s10">
+			      <input id="lieu" type="text" name="lieu" value=<?php echo '"'.$resultat['lieu'].'"' ?>>
+			      <label for="lieu">Lieu</label>
+			    </div>
 			    <div class="col s3" >
 				  	<label for="date">Date</label>
 				  	<input id="date" type="date" name="date" class="datepicker" />
@@ -29,10 +33,6 @@
 				  	<label for="time">Heure</label>
 				  	<input id="time" name="heure" type="time" value=<?php echo $resultat['heure_evenement']; ?>>
 				</div>
-				<div class="input-field col s6">
-			      <input id="lieu" type="text" name="lieu" value=<?php echo '"'.$resultat['lieu'].'"' ?>>
-			      <label for="lieu">Lieu</label>
-			    </div>
 				<div class="col s12">
 				  		<br><br/> 
 				  		<label for="icon_prefix2">Discipline sportive</label>
