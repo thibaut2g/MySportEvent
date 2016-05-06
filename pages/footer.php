@@ -29,7 +29,7 @@
     $('select').material_select();
   });
   $('.datepicker').pickadate({
-    format: 'yyyy/dd/mm',
+    format: 'yyyy/mm/dd',
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 30 // Creates a dropdown of 15 years to control year
     
